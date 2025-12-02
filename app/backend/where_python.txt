@@ -1,0 +1,1 @@
+exe= D:\Combined_Ingredient_Analysis_Project_v5\app\backend\venv\Scripts\python.exe

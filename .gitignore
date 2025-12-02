@@ -1,0 +1,7 @@
+venv/ 
+.venv/ 
+app/backend/venv/ 
+node_modules/ 
+*.pkl 
+package-lock.json 
+requirements.txt 

@@ -1,0 +1,9 @@
+[33mcommit 310d3439c693d9c6d27e96bebcf7a38c86f7b5b3[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Sumithra <sumithra593@gmail.com>
+Date:   Tue Dec 2 11:36:46 2025 +0530
+
+    Remove large binary files and venv/node_modules from tracking; update .gitignore
+
+ .gitignore            |   5 [32m+++++[m
+ app/backend/model.pkl | Bin [31m7902673[m -> [32m0[m bytes
+ 2 files changed, 5 insertions(+)

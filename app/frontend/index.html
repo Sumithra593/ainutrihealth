@@ -1,0 +1,32 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>NutriScan Demo Frontend</title>
+</head>
+<body>
+  <h2>NutriScan - Upload a product label image</h2>
+  <input id="file" type="file" accept="image/*"/>
+  <button id="send">Upload & Scan</button>
+  <pre id="out"></pre>
+
+<script>
+document.getElementById("send").onclick = async function(){
+  const inp = document.getElementById("file");
+  if(!inp.files.length){ alert("Choose an image first"); return; }
+  const f = inp.files[0];
+  const fd = new FormData();
+  fd.append("image", f, f.name);
+  document.getElementById("out").textContent = "Uploading...";
+  try{
+    const res = await fetch("/scan", { method: "POST", body: fd });
+    const j = await res.json();
+    document.getElementById("out").textContent = JSON.stringify(j, null, 2);
+  }catch(e){
+    document.getElementById("out").textContent = "Error: "+e.toString();
+  }
+}
+</script>
+</body>
+</html>
